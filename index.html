@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="/app.js"></script>
+    <title>Button Component</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="buttons" class="buttons">
+      <h2 id="buttons">Buttons</h2>
+      <div class="button-container">
+        <div class="button-wrapper">
+          <div>
+            <pre><code id="shadow-code">&ltbutton class="btn"/></code></pre>
+            <pre><code>&ltbutton class="btn btn-outline"/></code></pre>
+            <pre><code>&ltbutton class="btn btn-text"/></code></pre>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button id="default-btn" class="btn">Default</button>
+          <div class="toggle-button">
+            <label id="-switch" class="switch">
+              <input id="shadow-toggle" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="toggle-text">shadow</div>
+          <button class="btn btn-outline">Outline</button>
+          <button class="btn btn-text">Text</button>
+        </div>
+        <div class="button-wrapper">
+          <div id="disabled-code">
+            <pre><code name="code1">&ltbutton class="btn"/></code></pre>
+            <pre><code name="code2">&ltbutton class="btn btn-outline"/></code></pre>
+            <pre><code name="code3">&ltbutton class="btn btn-text"/></code></pre>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button id="default-btn-2" class="btn">Default</button>
+          <button id="outline-btn-2" class="btn btn-outline">Outline</button>
+          <button id="text-btn-2" class="btn btn-text">Text</button>
+          <div class="toggle-button">
+            <label id="disable-switch" class="switch">
+              <input id="disable-toggle" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="toggle-text">disable</div>
+        </div>
+        <div class="button-wrapper">
+          <div>
+            <pre><code id="left-right-code">&ltbutton class="btn btn-icon-l"/></code></pre>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button
+            id="default-btn-icon"
+            class="btn btn-icon-l"
+            data-text="Default"
+          >
+            <span data-text="Default" class="material-icons">
+              add_shopping_cart
+            </span>
+          </button>
+          <div class="toggle-button">
+            <label id="left-right-switch" class="switch">
+              <input id="left-right-toggle" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="toggle-text">right</div>
+        </div>
+        <div class="button-wrapper">
+          <div>
+            <pre><code>&ltbutton class="btn sm"/></code></pre>
+            <pre><code>&ltbutton class="btn md"/></code></pre>
+            <pre><code>&ltbutton class="btn lg"/></code></pre>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="btn sm">Small</button>
+          <button class="btn md">Medium</button>
+          <button class="btn lg">Large</button>
+        </div>
+        <div class="button-wrapper">
+          <div>
+            <pre><code>&ltbutton class="btn"/></code></pre>
+            <pre><code>&ltbutton class="btn primary"/></code></pre>
+            <pre><code>&ltbutton class="btn secondary"/></code></pre>
+            <pre><code>&ltbutton class="btn danger"/></code></pre>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="btn">Default</button>
+          <button class="btn primary">Primary</button>
+          <button class="btn secondary">Secondary</button>
+          <button class="btn danger">Danger</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <pre><code>Icons: https://material.io/resources/icons/</code></pre>
+      <h4 class="bottom-text">Jaka Daneu @ DevChallenges.io</h4>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --ff-poppins: 'Poppins', sans-serif;
+  --ff-notoSansJP: 'Noto Sans JP', sans-serif;
+  --ff-ubuntuMono: 'Ubuntu Mono', monospace;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-notoSansJP);
+}
+
+aside {
+  background: #fafbfd;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  height: 100%;
+  width: 170px;
+  color: #9e9e9e;
+}
+
+header {
+  min-height: 90vh;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.top-text {
+  font-family: var(--ff-poppins);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+
+  color: #090f31;
+}
+
+.top-text span {
+  color: #f7542e;
+}
+
+nav {
+  height: 90%;
+}
+
+.nav-links {
+  padding: 70px 0;
+  color: #9e9e9e;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.nav-links > li {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+.nav-links > li > a {
+  text-decoration: none;
+}
+
+.nav-links > li > a:visited {
+  color: #9e9e9e;
+}
+
+.nav-links > li > a:active,
+.nav-links > li > a:hover {
+  color: #090f31;
+  font-weight: bold;
+}
+
+.bottom-text {
+  font-family: var(--ff-poppins);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #a9a9a9;
+  padding-top: 40px;
+}
+
+footer {
+  font-family: var(--ff-ubuntuMono);
+  font-size: 12px;
+  text-align: left;
+  min-height: 10vh;
+  margin: 0 20px;
+}
+
+/* --- BUTTON container --- */
+
+.buttons {
+  min-height: 80vh;
+}
+
+.button-container {
+  width: 800px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+  /* margin-bottom: 20px; */
+}
+
+/* --- BUTTON WRAPPER --- */
+
+.button-wrapper {
+  min-width: 100%;
+  min-height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.button-wrapper > button {
+  margin: 0 10px;
+}
+
+.toggle-text {
+  color: #aeaeae;
+  font-size: 10px;
+  padding: 0 20px;
+}
+
+/* --- SWITCH --- */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  margin: 50%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e0e0e0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #aeaeae;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #aeaeae;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* --- BUTTONS --- */
+
+.buttons {
+  margin: 40px 20px;
+}
+
+.buttons h2 {
+  font-family: var(--ff-poppins);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #4f4f4f;
+  padding-bottom: 20px;
+}
+
+/* --- DEFAULT --- */
+
+.btn {
+  min-width: 81px;
+  height: 36px;
+  border: none;
+  color: #3f3f3f;
+  background: #e0e0e0;
+  box-shadow: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background: #aeaeae;
+  outline: none;
+}
+
+.btn:disabled {
+  color: #9e9e9e;
+}
+
+/* --- OUTLINE --- */
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #3d5afe;
+  color: #3d5afe;
+  box-shadow: none;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  background: rgba(41, 98, 255, 0.1);
+  outline: none;
+}
+
+.btn-outline:disabled {
+  border: 1px solid #9e9e9e;
+}
+
+/* --- TEXT --- */
+
+.btn-text {
+  background-color: transparent;
+  color: #3d5afe;
+  box-shadow: none;
+}
+
+.btn-text:hover,
+.btn-text:focus,
+.btn-text:active {
+  background: rgba(41, 98, 255, 0.1);
+  outline: none;
+}
+
+.shadow {
+  box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+}
+
+/* --- BUTTONS WITH ICONS --- */
+
+.btn.btn-icon-l,
+.btn.btn-icon-r {
+  min-width: 105px;
+}
+
+.btn.btn-icon-l::after {
+  content: attr(data-text);
+}
+
+.btn.btn-icon-r::before {
+  content: attr(data-text);
+}
+
+.btn.btn-icon-l > span,
+.btn.btn-icon-r > span {
+  transform: translateY(1px);
+}
+
+/* BUTTON SIZES */
+
+.sm {
+  min-width: 73px !important;
+  height: 32px;
+}
+.md {
+  min-width: 81px !important;
+  height: 36px;
+}
+.lg {
+  min-width: 93px !important;
+  height: 42px;
+}
+
+/*  --- BUTTON COLORS --- */
+
+.primary {
+  color: #fff;
+  background-color: #2962ff;
+}
+
+.secondary {
+  color: #fff;
+  background-color: #455a64;
+}
+.danger {
+  color: #fff;
+  background-color: #d32f2f;
+}
+
+/* --- MISCELLANEOUS --- */
+
+code {
+  font-size: 10px;
+}
